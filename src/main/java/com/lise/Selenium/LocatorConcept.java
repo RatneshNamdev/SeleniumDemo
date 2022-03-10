@@ -30,15 +30,6 @@ public class LocatorConcept {
 //        driver.findElement(By.name("lastname")).sendKeys("cruise");
         driver.findElement(By.name("Email")).sendKeys("ratnesh@yahoo.com");
 
-        //linkText ---1
-//        driver.findElement(By.linkText("Sign in")).click();
-
-        //partiallinkText i.e. not recommandet or not useful
-//        driver.findElement(By.partialLinkText("User Privacy")).click();
-
-        //CSSSelector ---2
-        //if id is there ----#{id}
-        //if class is there ---- .{class}
         driver.findElement(By.cssSelector("#firstname")).sendKeys("Ratnesh");
 
         //ClassName ----4
