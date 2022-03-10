@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AlertPopUpHandle {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
         System.setProperty("webdriver.chrome.driver", "/Users/aaa/Downloads/chromedriver");
         WebDriver driver=new ChromeDriver(); //load driver...
 
@@ -15,7 +15,16 @@ public class AlertPopUpHandle {
 
         Alert alert=driver.switchTo().alert();
 
-        System.out.println(alert.getText());
+        String text=alert.getText();
+        System.out.println(text);
+
+        Thread.sleep(5000);
+
+        if(text.equals("Please enter a valid user name")){
+            System.out.println("Correct Alert msg..");
+        }else {
+            System.out.println("InCorrect Alert msg..");
+        }
 
         alert.accept(); // click on "OK" Btn...
 
